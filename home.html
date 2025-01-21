@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Déryck</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar {
+            background-color: #333;
+        }
+
+        .navbar .navbar-nav .nav-link {
+            color: white !important;
+        }
+
+        .navbar .navbar-nav .nav-link:hover {
+            color: #ffcc00 !important;
+        }
+
+        .social-icons {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .social-icons li {
+            display: inline;
+            margin-left: 10px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+        }
+
+        .social-icons a:hover {
+            color: #ffcc00;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .info-block img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .info-block {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+            margin: 20px 0;
+        }
+
+        .row-centered {
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-content {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .main-content h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .main-content p {
+            font-size: 1.25rem;
+            color: white;
+        }
+
+        @media (max-width: 576px) {
+            .main-content h1 {
+                font-size: 2rem;
+            }
+
+            .main-content p {
+                font-size: 1rem;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">Déryck</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobremim.html">Sobre mim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                </ul>
+                <!-- Redes sociais no lado direito -->
+                <ul class="social-icons d-flex justify-content-center">
+                    <li><a href="https://www.facebook.com/profile.php?id=61559775982538" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/1024px-2023_Facebook_icon.svg.png" alt="Facebook" width="32"></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/deryck.anthony/" target="_blank">
+                        <img src="https://www.edigitalagency.com.au/wp-content/uploads/Instagram-logo-PNG-large-size.png" alt="Instagram" width="32"></a>
+                    </li>
+                    <li><a href="discord://-/users/658817598888214533" target="_blank">
+                        <img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="Discord" width="32"></a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/d%C3%A9ryck-anthony-1338b61a2/" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" width="32"></a>
+                    </li>
+                    <li><a href="https://wa.me/17997477563" target="_blank">
+                        <img src="https://www.edigitalagency.com.au/wp-content/uploads/WhatsApp-logo-PNG-green-large-size.png" alt="WhatsApp" width="32"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carrossel de Boas-Vindas -->
+    <div id="welcomeCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://media.tenor.com/GfSX-u7VGM4AAAAM/coding.gif" alt="Programador">
+            </div>
+
+            <div class="carousel-item">
+                <img src="https://datlo.com/blog/wp-content/uploads/2022/06/1_s2sSUmiJGjitCLgjZA8H4w.gif" alt="Banco de dados">
+            </div>
+
+            <div class="carousel-item">
+                <img src="https://i.gifer.com/1fqJ.gif" alt="EUA">
+            </div>
+
+            <div class="carousel-item">
+                <img src="https://media.licdn.com/dms/image/v2/D4D12AQF4tTmXfV0AKw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1668240317510?e=2147483647&v=beta&t=xad_kFgcMa7KjyUWZRMyUHFW88DaJafbyf2Cp4RrCY8" alt="Expo.Dev">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#welcomeCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#welcomeCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
+    </div>
+
+    <!-- Conteúdo Criativo Centralizado -->
+    <div class="main-content">
+        <h1>Bem-vindo(a) ao meu portfólio!</h1>
+        <p>Veja os cursos e certificações que concluí</p>
+    </div>
+
+    <!-- Cartões -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Cartões 1, 2 e 3 -->
+            <div class="col-md-4">
+                <div id="carouselWordPowerpointExcel" class="carousel slide info-block" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://cdn.worldvectorlogo.com/logos/word-1.svg" alt="Word">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://cdn.worldvectorlogo.com/logos/microsoft-powerpoint-2013.svg" alt="PowerPoint">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://cdn.worldvectorlogo.com/logos/microsoft-excel-2013.svg" alt="Excel">
+                        </div>
+                    </div>
+                    <h5>Informática Básica</h5>
+                    <p>Certificação em Word, PowerPoint e Excel</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div id="carouselHardware" class="carousel slide info-block" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://static01.nyt.com/images/2021/07/08/business/06Techfix-illo/06Techfix-illo-superJumbo.gif" alt="Hardware">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://media0.giphy.com/media/lbcLMX9B6sTsGjUmS3/200.gif?cid=6c09b952und88cfje1jray6jdi27et899tqvcfpc1eike9mo&ep=v1_gifs_search&rid=200.gif&ct=g" alt="Redes">
+                        </div>
+                    </div>
+                    <h5>Hardwares e Redes</h5>
+                    <p>Certificação em formatação de computadores e redes</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div id="carouselMarketing" class="carousel slide info-block" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://img.icons8.com/fluent/600/coreldraw-2021.png" alt="CorelDraw">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/2101px-Adobe_Photoshop_CC_icon.svg.png" alt="PhotoShop">
+                        </div>
+                    </div>
+                    <h5>Marketing Digital</h5>
+                    <p>Certificação em Corel Draw e Photoshop</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Cartões 4, 5 e 6 -->
+            <div class="col-md-4">
+                <div class="info-block">
+                    <img src="https://nilgiristores.in/wp-content/uploads/2023/12/1703556909_s-l500.png" alt="Construct 2">
+                    <h5>Construct 2</h5>
+                    <p>Certificação em Criação de jogos em 2D</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-block">
+                    <img src="https://brandini.news.blog/wp-content/uploads/2025/01/output-onlinegiftools.gif?w=640" alt="Java">
+                    <h5>Java</h5>
+                    <p>Noções básicas sobre Java</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-block">
+                    <img src="https://user-images.githubusercontent.com/124924248/218573114-2f009914-3ec9-4f41-a66f-fdd76e32e7b5.gif" alt="CSS">
+                    <h5>CSS</h5>
+                    <p>Noções básicas sobre CSS</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Cartões 7, 8 e 9 -->
+            <div class="col-md-4">
+                <div id="carouselJavascript" class="carousel slide info-block" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png" alt="JavaScript">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://icon-icons.com/icons2/2389/PNG/512/expo_logo_icon_145293.png" alt="Expo">
+                        </div>
+                    </div>
+                    <h5>JavaScript</h5>
+                    <p>Noções básicas sobre desenvolvimento com Expo.Dev</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-block">
+                    <img src="https://miro.medium.com/v2/resize:fit:1400/1*s2sSUmiJGjitCLgjZA8H4w.gif" alt="Banco de Dados">
+                    <h5>Banco de Dados</h5>
+                    <p>Noções básicas sobre Bancos de Dados</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-block">
+                    <img src="https://phoneky.co.uk/thumbs/screensavers/down/original/usaflag_6sr3xe2f.gif" alt="Inglês">
+                    <h5>Inglês</h5>
+                    <p>Certificação em Inglês</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Footer -->
+<footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+        <div class="row">
+            <!-- Redes Sociais -->
+            <div class="col-md-4">
+                <h5>Redes Sociais</h5>
+                <ul class="list-unstyled">
+                    <li><a href="https://www.facebook.com/profile.php?id=61559775982538" class="text-white" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/deryck.anthony/" class="text-white" target="_blank">Instagram</a></li>
+                    <li><a href="discord://-/users/658817598888214533" class="text-white" target="_blank">Discord</a></li>
+                    <li><a href="https://www.linkedin.com/in/d%C3%A9ryck-anthony-1338b61a2/" class="text-white" target="_blank">LinkedIn</a></li>
+                   
+                </ul>
+            </div>
+
+            <!-- Contato -->
+            <div class="col-md-4 offset-md-4 text-right"> <!-- Garantindo que a coluna está à direita -->
+                <h5>Contato</h5>
+                <ul class="list-unstyled" style="text-align: right; direction: rtl; margin: 0; padding: 0;"> <!-- Ajuste de margem e padding -->
+                    <li><a href="https://wa.me/17997477563" class="text-white" target="_blank">WhatsApp</a></li>
+                    <li><a href="tel:+5517997477563" class="text-white" style="display: inline-block; margin-bottom: 0;">(17) 997477563</a></li>
+                    <li><a href="mailto:deryck621@gmail.com" class="text-white" style="display: inline-block; margin-bottom: 0;">deryck621@gmail.com</a></li>
+                    <li><p class="text-white" style="margin-bottom: 0;">São João das Duas Pontes - SP</p></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Direitos Autorais -->
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <p class="text-white">Déryck Copyright &copy; 2025 - Todos os Direitos Reservados.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Estilo para o footer -->
+<style>
+    footer ul {
+        padding-left: 0;
+    }
+
+    footer a {
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        color: #ffcc00;
+    }
+
+    footer h5 {
+        font-weight: bold;
+    }
+
+    /* Alinhamento à direita da coluna de Contato */
+    footer .text-right {
+        text-align: right;
+    }
+
+    /* Garantir que a lista esteja da direita para a esquerda */
+    footer .text-right ul {
+        direction: rtl; /* Faz o texto começar da direita */
+        text-align: right; /* Alinha todo o conteúdo à direita */
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Ajustando para remover o espaçamento extra nas linhas */
+    footer .text-right li {
+        margin-bottom: 0;
+    }
+
+    footer .text-right p {
+        margin-bottom: 0;
+    }
+</style>
+<script>
+   document.addEventListener("DOMContentLoaded", () => {
+  const intervalTime = 4000; // Tempo de intervalo entre imagens (4 segundos)
+
+  document.querySelectorAll(".carousel").forEach(carousel => {
+    const items = carousel.querySelectorAll(".carousel-item");
+    let currentIndex = 0;
+
+    const switchItem = () => {
+      // Remove a classe ativa do item atual
+      items[currentIndex].classList.remove("active");
+
+      // Calcula o próximo índice
+      currentIndex = (currentIndex + 1) % items.length;
+
+      // Adiciona a classe ativa ao próximo item
+      items[currentIndex].classList.add("active");
+    };
+
+    // Inicia o carrossel com um intervalo regular
+    setInterval(switchItem, intervalTime);
+  });
+});
+</script>
+</body>
+</html>
